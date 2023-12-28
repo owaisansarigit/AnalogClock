@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+    height: 100vh;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius:50%;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 3rem auto;
+
+}
+.clock ul li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 5px;
+}
+.clock ul li span{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+.clock:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+.needle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.needle span{
+    width: 3px;
+    height: var(--h);
+    background-color: black;
+    position: absolute;
+    border-radius: 5px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.digiClock{
+    display: flex;
+    justify-content: center;
+    /* align-items: cente; */
+    gap: 10px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.in{
+    height: 50px;
+    width: 100px;
+}
